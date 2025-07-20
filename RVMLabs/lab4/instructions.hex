@@ -1,0 +1,17 @@
+00000013        // addi x0, x0, 0  -nop
+00000013        // addi x0, x0, 0  -nop
+00300313        // li   t1,3                    : 0x000
+00400393        // li   t2,4                    : 0x004
+00100e13        // li   t3,1                    : 0x008
+00838663        // beq  t2, zero, 0x1010c <end_0>       : 0x014  = bne t0,zero, offset  (4*2)
+026e0e33        // mul  t3,t3,t1                : 0x018
+fff38393        // addi t2,t2,-1                : 0x024
+fe039ce3        // bnez t2,0x10100 <loop_0>     : 0x028
+00000013        // addi x0, x0, 0  -nop
+00000013        // addi x0, x0, 0  -nop
+00000013        // addi x0, x0, 0  -nop
+00000013        // addi x0, x0, 0  -nop
+00000013        // addi x0, x0, 0  -nop
+00000013        // addi x0, x0, 0  -nop
+00000000        //
+
