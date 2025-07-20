@@ -1,0 +1,21 @@
+00000013        // addi x0, x0, 0  -nop
+00000013        // addi x0, x0, 0  -nop
+00600313        // li   t1,6                    : 0x000
+00700393        // li   t2,7                    : 0x004
+00000e13        // li   t3,0                    : 0x008
+02000593        // li   a1,32                   : 0x00c
+0013f293        // andi t0,t2,1                 : 0x010
+00028463        // beqz t0,0x101ac <skip_add>   : 0x014  = bne t0,zero, offset  (4*2)
+//000a0463      // beqz t0,0x0001C <skip_add>   : 0x014
+006e0e33        // add  t3,t3,t1                : 0x018
+00131313        // slli t1,t1,0x1               : 0x01c
+0013d393        // srli t2,t2,0x1               : 0x020
+fff58593        // addi a1,a1,-1                : 0x024
+fe0594e3        // bnez a1,0x101a0 <loop>       : 0x028
+//f80b2383      // bnez a1,0x101a0 <loop>       : 0x028
+00000013        // addi x0, x0, 0  -nop
+00000013        // addi x0, x0, 0  -nop
+00000013        // addi x0, x0, 0  -nop
+00000013        // addi x0, x0, 0  -nop
+00000013        // addi x0, x0, 0  -nop
+
